@@ -12,7 +12,7 @@ function router(app)
 	//viewone
 	app.get("/api/posts/:id", api.getOne);
 	//deleteone
-	app.delete("/api/posts/:id", api.delete);
+	app.delete("/api/posts/:id", api.destroy);
 	//updateone
 	app.patch("/api/posts/edit/:id", api.update);
 	//addreview

@@ -55,7 +55,7 @@ function destroy(req,res)
 module.exports = 
 {
 	getAll: getAll,
-	create: createOne,
+	create: create,
 	destroy: destroy,
 	addComment: addComment,
 	getOne: getOne,
