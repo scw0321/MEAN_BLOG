@@ -17,7 +17,8 @@ app.use(session({
 app.use(express.static(path.join(__dirname, "/public/dist/public")));
 
 router(app);
-app.all("*", (req,res)=>res.sendFile(path.join(__dirname, "/public/dist/public/index.html")));
+app.all("**", (req,res)=>res.sendFile(path.join(__dirname + "/public/dist/public/index.html")));
+
 
 // app.post('/sessions', (req, res) => {
 //     console.log(" req.body: ", req.body);
