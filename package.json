@@ -19,6 +19,7 @@
     "fs": "0.0.1-security",
     "jquery": "^3.3.1",
     "mongoose": "^5.2.9",
+    "mongoose-type-email": "^1.0.9",
     "mongoose-unique-validator": "^2.0.1",
     "node-datetime": "^2.0.9",
     "nodemon": "^1.18.3",
