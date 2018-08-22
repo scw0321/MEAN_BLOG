@@ -1,0 +1,7 @@
+* text=auto
+*.css linguist-vendored
+*.less linguist-vendored
+*.sh eol=lf
+*.json eol=lf
+*.lock eol=lf
+*.svg binary

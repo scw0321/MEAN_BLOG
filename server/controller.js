@@ -47,10 +47,24 @@ function addComment(req,res)
 // deleteOne
 function destroy(req,res)
 {
-	postts.findByIdAndRemove(req.params.id)
+	posts.findByIdAndRemove(req.params.id)
 		.then(data=>res.json({status: "deleted", data: data}))
 		.catch(errs=>res.json({status: "nope", data: errs}));
 }
+
+// app.post('/sessions', (req, res) => {
+//     console.log(" req.body: ", req.body);
+//     User.findOne({email:req.body.email, password: req.body.password}, (err, user) => {
+//         if (err) {
+//             // Code...
+//         }
+//         else {
+//             // Code...
+//     		req.session.user_id = user._id;
+// 		req.session.email = user.email;
+//         }
+//     })
+// })
 
 module.exports = 
 {
