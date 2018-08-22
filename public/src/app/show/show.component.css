@@ -1,0 +1,15 @@
+form input{
+    display: block;
+}
+
+form label{
+    vertical-align: top;
+}
+
+.container{
+
+    border: 2px solid black;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+}
