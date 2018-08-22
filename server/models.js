@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost:27017/blog", { useNewUrlParser: true }, (errs)=>console.log(errs||'Run! DB Run!'));
 var mongoose_email = require('mongoose-type-email');
 
+
 const PostSchema = new mongoose.Schema({
 	email: {
 		type: mongoose_email,
@@ -28,12 +29,10 @@ const PostSchema = new mongoose.Schema({
 		},
 		comment: {
 			type: String,
-			
-			minlength: [3, 'comment must be at least 3 characters']
-		},
+			minlength: [3, 'review must be at least 3 characters']
+		}
 	}]
 }, {timestamps: true})
 
 const posts= mongoose.model('post', PostSchema);
-
 module.exports = posts

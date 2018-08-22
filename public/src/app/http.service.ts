@@ -20,7 +20,10 @@ export class HttpService {
   }
 
   //Get One
-
+  getOne(id){
+    console.log("getting one post - http service");
+    return this._http.get("/api/posts/" + id);
+  }
 
   // Update
 

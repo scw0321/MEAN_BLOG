@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ShowComponent } from './show/show.component';
+import { NewComponent } from './new/new.component';
 
 const routes: Routes = [
   {path: "posts", pathMatch: "full", component: HomeComponent},
   {path: "posts/show/:id", pathMatch: "full", component: ShowComponent},
+  {path: "posts/new", pathMatch: "full", component: NewComponent},
   {path: "", pathMatch: "full", redirectTo: "posts"},
   {path: "**", pathMatch: "full", redirectTo: "posts"},
 
