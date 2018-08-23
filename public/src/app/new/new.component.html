@@ -1,29 +1,42 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mean_Blog</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
 <div class="container">
 	<form (submit)="create()">
+
+		<div class="form-group">
+				<label for="question" class="topic">Topic: </label>
+				<select name="topic" [(ngModel)]="_post.topic">
+					<option value="HTML/CSS">HTML/CSS</option>
+					<option value="Python">Python</option>
+					<option value="MEAN">MEAN</option>
+					<option value="C#">C#</option>
+					<option value="Java">Java</option>
+					<option value="Algorithms">Algorithms</option>
+				</select>
+				</div>
+
 		<div class="form-group">
 		  <label for="question">Title</label>
 		  <input type="text" [(ngModel)]="_post.title" class="form-control" id="question" aria-describedby="question_input" placeholder="Enter a Title" name="title">
 		  <small id="question_input" class="form-text text-muted">Keep question title short and concise</small>
 		</div>
-  
+
 		<div class="form-group">
-		  <label for="exampleInputPassword1" class="description">Post/Description</label>
-		  <textarea name="description" [(ngModel)]="_post.description" cols="140" rows="10"></textarea>
-		</div>
-  
-		<div class="form-group">
-			<label for="question" class="topic">Topic</label>
-			<select name="topic" [(ngModel)]="_post.topic">
-			  <option value="web">Web Fundamentals</option>
-			  <option value="python">Python</option>
-			  <option value="mean">Mean</option>
-			  <option value="c#">C#</option>
-			  <option value="java">Java</option>
-			</select>
-		  </div>
-		
-		<button type="submit" class="btn btn-primary">Submit</button>
+				<label for="comment">Post/Description:</label>
+				<textarea class="form-control" rows="5" id="comment" name="description" [(ngModel)]="_post.description" ></textarea>
+			</div>
+  		
+		<button type="submit" class="btn btn-primary">Add your question</button>
 	</form>
-  </div>
-  
+	</div>
+	</body>
+  </html>
