@@ -1,10 +1,29 @@
-<main>
-	<h3>Register a Title</h3>
-	<p *ngFor="let err of errors" style="color:purple">{{err}}</p>
-	<form (submit)="create()">
-		<p>Title: <input type="text" name="name" [(ngModel)]="_post.title"></p>
-		<p>Description: <input type="text" name="cuisine" [(ngModel)]="_post.description"></p>
-		<input type="submit" name="create">
-		<button [routerLink]="['/posts/']">Cancel</button>
-	</form>
-</main>
+
+<div class="container">
+	<form>
+		<div class="form-group">
+		  <label for="question">Title</label>
+		  <input type="text" class="form-control" id="question" aria-describedby="question_input" placeholder="Enter a Title">
+		  <small id="question_input" class="form-text text-muted">Keep question title short and concise</small>
+		</div>
+  
+		<div class="form-group">
+		  <label for="exampleInputPassword1" class="post">Post/Description</label>
+		  <textarea name="post" cols="140" rows="10"></textarea>
+		</div>
+  
+		<div class="form-group">
+			<label for="question" class="topic">Topic</label>
+			<select name="topic">
+			  <option value="web">Web Fundamentals</option>
+			  <option value="python">Python</option>
+			  <option value="mean">Mean</option>
+			  <option value="c#">C#</option>
+			  <option value="java">Java</option>
+			</select>
+		  </div>
+		
+		<button type="submit" class="btn btn-primary">Submit</button>
+	  </form>
+  </div>
+  

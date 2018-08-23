@@ -1,20 +1,29 @@
-<div class="wrapper">
-  <h2>Your Posts</h2>
+<!-- HOME DISPLAY TABLE IN GRID -->
 
-  <form [routerLink] = "['/posts/new']">
-    <input type="submit" value="Add New Post">
-  </form>
-  
-  <div class="container">
-    <div class="post_content" *ngFor = "let post of posts">
-      <p class="title">{{post.title}}</p>
-      <p>{{post.description}}</p>
-      <a href="/posts/{{post._id}}">see more</a>
+<div class="container">
+  <!-- Add new question -->
+<button><a href="/posts/new">Add Post/Question</a></button>
+<!-- <form [routerLink] = "/posts/new"><input type="submit" value="Add Post"></form> -->
 
-    </div>
+<div class="row">
+  <div class="col-lg-12">
+    <table class="table">
+      <!-- table header -->
+      <thead>
+        <th class="question">Question</th>  
+        <th class="topic">Topic</th>  
+        <th class="date">Date</th>  
+      </thead>
+      <!-- table rows -->
+      <!-- ngFor -> the post data in for the placeholder -->
+      <tr>
+        <td><a href="/posts/edit/:id">Placeholder Question</a></td>
+        <td>Placeholder Topic</td>
+        <td>Placeholder Date</td>
+      </tr>
+    </table>
   </div>
-  
 </div>
-
+</div>
 
 
