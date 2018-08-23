@@ -1,44 +1,37 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+
 @Injectable({
   providedIn: 'root'
+
 })
+
 export class HttpService {
-
   constructor(private _http: HttpClient) { }
+  //Create
 
-  getAll()
-  {
-  	return this._http.get("/api/posts");
-  }
 
-  destroy(id)
-  {
-  	return this._http.delete("/api/posts/"+id);
-  }
+  // Get ALL
+  getAll(){
+    console.log("getting all posts - http")
+    return this._http.get('/api/posts');
 
-  create(data)
-  {
-  	return this._http.post("/api/posts/new", data);
   }
 
-  getOne(id)
-  {
-  	return this._http.get("/api/posts/"+id);
+  //Get One
+  getOne(id){
+    console.log("getting one post - http service");
+    return this._http.get("/api/posts/" + id);
   }
 
-  update(id, data)
-  {
-  	return this._http.patch("/api/posts/edit/"+id, data)
-  }
+  // Update
 
-  addAnswer(id, data)
-  {
-  	return this._http.put("/api/posts/"+id+"/comment/", data);
-  }
-  addComment(id, data)
-  {
-  	return this._http.put("/api/posts/"+id+"/answer/"+id+"/comment", data);
-  }
+
+  // Delete
+
+
+
+
+
 }
