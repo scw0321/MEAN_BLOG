@@ -4,15 +4,15 @@ mongoose.connect("mongodb://localhost:27017/mean_blog", { useNewUrlParser: true 
 const PostSchema = new mongoose.Schema({
 	title: {
 		type: String,
-		minlength: [3, 'name must be at least 3 characters']
+		minlength: [3, 'title must be at least 3 characters']
 	},
 	description: {
 		type: String,
-		minlength: [3, 'cuisine must be at least 3 characters']
+		minlength: [3, 'description must be at least 3 characters']
 	},
 	topic: {
 		type: String,
-		minlength: [3, 'cuisine must be at least 3 characters']
+		minlength: [3, 'topic must be at least 3 characters']
 	},
 	posted_at: Date,
 	
@@ -25,7 +25,7 @@ const PostSchema = new mongoose.Schema({
 		comments: [{
 			comment: {
 				type: String,
-				minlength: [3, 'answer must be at least 3 characters']
+				minlength: [3, 'comment must be at least 3 characters']
 			}
 			}]
 	}]

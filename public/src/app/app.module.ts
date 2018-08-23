@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ShowComponent } from './show/show.component';
 import { NewComponent } from './new/new.component';
-import { UpdateComponent } from './update/update.component';
+// import { UpdateComponent } from './update/update.component';
 import { CommentComponent } from './comment/comment.component';
 
 
@@ -18,7 +18,7 @@ import { CommentComponent } from './comment/comment.component';
     HomeComponent,
     ShowComponent,
     NewComponent,
-    UpdateComponent,
+    // UpdateComponent,
     CommentComponent   
   ],
   imports: [

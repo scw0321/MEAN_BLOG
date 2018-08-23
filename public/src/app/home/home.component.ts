@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 
 
@@ -12,21 +12,32 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   posts: any[] = [];
-  constructor(private _http: HttpService, private _router:Router) { }
+  // posts: any;
+  constructor(private _http: HttpService, private _router: Router, 
+    private _route: ActivatedRoute) { }
 
   ngOnInit() {
     this.posts = [{
       title: "",
-      description: ""
+      description: "",
+      createdAt: ""
     }]
 
-    let observable = this._http.getAll();
-    observable.subscribe((data: any[]) => {this.posts = data})
+    // let obs = this._http.getAll()
+    // obs.subscribe((data:any[])=>{this.posts = data});
+    let obs = this._http.getAll()
+  	obs.subscribe((data:any[])=>this.posts = data);
+  	// console.log(this.posts);
+  }
+  getAll()
+  {
+    let obs = this._http.getAll()
+    obs.subscribe((data:any[])=>this.posts = data);
   }
 
-  createNew(){
-    console.log("post a new question")
-  }
+  // createNew(){
+  //   console.log("post a new question")
+  // }
  
 
 

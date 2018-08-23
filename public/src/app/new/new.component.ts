@@ -22,7 +22,9 @@ export class NewComponent implements OnInit {
   }
 
   create()
+  
   {
+	console.log(this._post)
   	this._http.create(this._post).subscribe(data=>{
   		if('errors' in data)
   		{
