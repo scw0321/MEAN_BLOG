@@ -1,30 +1,36 @@
-<!-- HOME DISPLAY TABLE IN GRID -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mean_Blog</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
 
 <div class="container">
-  <!-- Add new question -->
-<button><a href="/posts/new">Add Post/Question</a></button>
-<!-- <form [routerLink] = "/posts/new"><input type="submit" value="Add Post"></form> -->
-
-<div class="row">
-  <div class="col-lg-12">
-    <table class="table">
-      <!-- table header -->
-      <thead>
-        <th class="question">Question</th>  
-        <th class="topic">Topic</th>  
-        <th class="date">Date</th>  
-      </thead>
-      <tbody>
-      
-      <tr *ngFor="let x of posts" >
-        <td><a [routerLink]="['/posts/',x._id]">{{x.title}}</a></td>
-        <td>{{x.topic}}</td>
-        <td>{{x.createdAt}}</td>
+  <!-- <h2>Q & A</h2> -->
+  <button><a href="/posts/new">Add Post/Question</a></button>          
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>topic</th>
+        <th>Created_at</th>
+      </tr>
+    </thead>
+    <tbody>    
+      <tr *ngFor="let post of posts" >
+      <td><a [routerLink]="['/posts/',post._id]">{{post.title}}</a></td>
+      <td>{{post.topic}}</td>
+      <td>{{post.createdAt}}</td>
       </tr>
     </tbody>
-    </table>
-  </div>
-</div>
+  </table>
 </div>
 
+</body>
+</html>
 

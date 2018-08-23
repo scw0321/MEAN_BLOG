@@ -6,10 +6,21 @@ form label{
     vertical-align: top;
 }
 
-.container{
 
-    border: 2px solid black;
-    width: 1000px;
-    margin: 0 auto;
+.container{
+    width: auto;
+    border: 5px solid black;
+    border-radius: 5px;
     padding: 10px;
+    margin: 10px;
+}
+
+.container a{
+    color: black;
+    font-size: 20px;
+}
+
+.title{
+    font-size: 20px;
+    text-decoration: underline;
 }
