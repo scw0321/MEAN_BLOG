@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
-import { Router } from '../../../node_modules/@angular/router';
+import { Router } from '@angular/router';
 
 
 
@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.posts = [{
       title: "",
-      description: "",
+      description: ""
     }]
 
     let observable = this._http.getAll();
@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
   }
 
   createNew(){
-    console.log("creating a new post")
+    console.log("post a new question")
   }
  
 

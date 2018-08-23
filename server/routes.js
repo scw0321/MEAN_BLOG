@@ -5,18 +5,19 @@ const api = require("./controller");
 function router(app)
 {
 	app.use(bp.json());
-	//readall
+	//getall
 	app.get("/api/posts", api.getAll);
 	//create
 	app.post("/api/posts/new", api.create);
-	//viewone
+	//getone
 	app.get("/api/posts/:id", api.getOne);
-	//deleteone
-	app.delete("/api/posts/:id", api.destroy);
-	//updateone
-	app.patch("/api/posts/edit/:id", api.update);
-	//addreview
-	app.put("/api/posts/:id/comment", api.addComment);
+	//delete
+	// app.delete("/api/posts/:id", api.destroy);
+	//update
+	// app.patch("/api/posts/update/:id", api.update);
+	//addComment
+	app.put("/api/posts/:id/answer", api.addAnswer);
+	app.put("/api/posts/:id/answer/:id/comment", api.addAnswerComment);
 }
 
 module.exports = router;

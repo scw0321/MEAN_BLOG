@@ -1,0 +1,14 @@
+<p>
+  comment works!
+</p>
+<main>
+	<h2>Write a comment for {{_post.title}}!</h2>
+	<p *ngFor="let err of errors" style="color:purple">{{err}}</p>
+	<form (submit)="addComment(_post._id)">
+		<p>Title: <input type="text" name="title" [(ngModel)]="_comment.title"></p>
+		<p>Description: <input type="text" name="description" [(ngModel)]="_comment.description"></p>
+		<p name="comment" [(ngModel)]="_comment.comment">Comment	</p>
+		<button><a [routerLink]="['/posts']">Cancel</a></button>
+		<input type="submit" name="Submit Comment">
+	</form>
+</main>

@@ -1,0 +1,10 @@
+<main>
+	<h3>Register a Title</h3>
+	<p *ngFor="let err of errors" style="color:purple">{{err}}</p>
+	<form (submit)="create()">
+		<p>Title: <input type="text" name="name" [(ngModel)]="_post.title"></p>
+		<p>Description: <input type="text" name="cuisine" [(ngModel)]="_post.description"></p>
+		<input type="submit" name="create">
+		<button [routerLink]="['/posts/']">Cancel</button>
+	</form>
+</main>
