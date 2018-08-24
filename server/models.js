@@ -21,19 +21,13 @@ const PostSchema = new mongoose.Schema({
 		answer: {
 			type: String,
 			minlength: [3, 'answer must be at least 3 characters']
-		},
-		comments: [{
-			comment: {
-				type: String,
-				minlength: [3, 'comment must be at least 3 characters']
-			}
-			}]
+		}
+		
 	}]
 }, {timestamps: true})
 
 
 const Posts= mongoose.model('post', PostSchema);
-// const Comments= mongoose.model('comment', CommentSchema);
-// const Answers = mongoose.model('answer', AnswerSchema);
+
 
 module.exports = Posts

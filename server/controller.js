@@ -31,7 +31,7 @@ function create(req,res)
 }
 
 // addAnswer
-function createAnswer(req,res)
+function addAnswer(req,res)
 {
 	Posts.findById(req.params.id)
 		.then(data=>{
@@ -42,18 +42,7 @@ function createAnswer(req,res)
 		.catch(errs=>res.json(errs));
 }
  
-//addAnswerComment
-function createAnswerComment(req,res)
-{
-	// Posts.findById(req.params.id)
-	// 	.then(data=>{
-	// 		Answers.findById(req.params.id)
-	// 		data.answers.push(req.body);
-	// 		return data.save()
-	// 	})
-	// 	.then(data=>res.json(data))
-	// 	.catch(errs=>res.json(errs));
-}
+
 
 
 
@@ -62,9 +51,9 @@ module.exports =
 	getAll: getAll,
 	create: create,
 	// destroy: destroy,
-	addAnswer: createAnswer,
-	getOne: getOne,
-	addAnswerComment: createAnswerComment
+	addAnswer: addAnswer,
+	getOne: getOne
+	
 }
 
 

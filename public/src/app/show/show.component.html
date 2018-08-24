@@ -8,51 +8,38 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+
 <body>
 <div class="container">
-  <!-- <form> -->
+
 <div class="form-group">
-  <h4 for="question">Title:</h4>
+  <h4 for="question"><b>Title:</b></h4>
   <p>{{_post.title}}</p>
 
-  <h4 for="description">Description:</h4> 
+  <h4 for="description"><b>Description:</b></h4> 
     <p>{{_post.description}}</p>
-  
+    
 </div>
 
-<h4 for="answer">Answer:</h4> 
 
 <!-- Add Answer Form -->
-<form action="">
-  <div class="form-group">
+<!-- <form (submit)="addAnswer(_post._id)"> -->
+    <form (submit)="addAnswer(_post._id)">
     <div class="form-group">
-      <label for="exampleInputPassword1" class="post">Your Answer:</label>
-      <textarea class="form-control" rows="5" id="comment" name="ansswer" [(ngModel)]="_post.answer" ></textarea>
+        <h4 for="answer"><b>Your answer:</b></h4> 
+      <textarea class="form-control" style="resize: none; overflow-y: auto;" rows="5" id="answer" name="answer" [(ngModel)]="_answer.answer" ></textarea>
     </div>    
-  </div>
-  <button type="submit" class="btn btn-primary">Add your answer</button>
+    <button type="submit">Add your answer</button>
+  <!-- <button type="submit" [routerLink]="['/posts/answers',_post._id]">Add your answer</button> -->
+  
+  <!-- <input type="submit" name="Add your ansswer"> -->
 </form>
 
 </div>
-<div class="container answers">
-    <div>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam error, quibusdam non itaque ab est exercitationem eum necessitatibus inventore ad nulla quam? Consequuntur, error dolorum. Deleniti sit nam delectus temporibus.</p>
-      <p>{{_post.answers}}</p>
-      <div class="comments" style="color:blue">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis totam repellendus nulla ad reprehenderit dolores voluptate repudiandae facere debitis eos id maiores aliquid assumenda, saepe animi maxime vel temporibus ea.</p>
-      </div>
-      <form action="">
-          <div class="form-group">
-            <div class="form-group">
-              
-              <label class="post">Add comment:</label>
-              <textarea class="form-control" rows="5" id="comment" name="comment" [(ngModel)]="_post.answers.comment" ></textarea>
-              
-            </div>    
-          </div>
-          <button type="submit" class="btn btn-primary">Add your comment</button>
-        </form>
-    </div>
+<div class="container answers" *ngFor="let x of _post.answers">
+    <h4 for="answer"><b>Answer:</b></h4>
+    	<p>{{x.answer}}</p>
+    
   </div>
 </body>
 </html>

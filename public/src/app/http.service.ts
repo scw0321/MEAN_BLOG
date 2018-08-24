@@ -35,10 +35,9 @@ export class HttpService {
 
   addAnswer(id, data)
   {
-  	return this._http.put("/api/posts/"+id+"/comment/", data);
+    // return this._http.put("/api/posts/"+id+"/answer/", data);
+    return this._http.put("/api/posts/"+id, data);
   }
-  addComment(id, data)
-  {
-  	return this._http.put("/api/posts/"+id+"/answer/"+id+"/comment", data);
-  }
+  
+  
 }

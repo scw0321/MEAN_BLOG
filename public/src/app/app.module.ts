@@ -9,7 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { ShowComponent } from './show/show.component';
 import { NewComponent } from './new/new.component';
 // import { UpdateComponent } from './update/update.component';
-import { CommentComponent } from './comment/comment.component';
+
+
 
 
 @NgModule({
@@ -17,9 +18,10 @@ import { CommentComponent } from './comment/comment.component';
     AppComponent,
     HomeComponent,
     ShowComponent,
-    NewComponent,
-    // UpdateComponent,
-    CommentComponent   
+    NewComponent
+    
+    
+    
   ],
   imports: [
     BrowserModule,

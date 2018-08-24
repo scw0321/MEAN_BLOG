@@ -23,21 +23,14 @@ export class HomeComponent implements OnInit {
       createdAt: ""
     }]
 
-    // let obs = this._http.getAll()
-    // obs.subscribe((data:any[])=>{this.posts = data});
-    let obs = this._http.getAll()
-  	obs.subscribe((data:any[])=>this.posts = data);
-  	// console.log(this.posts);
+    this._http.getAll().subscribe((data:any[])=>this.posts = data);
+  
   }
   getAll()
   {
-    let obs = this._http.getAll()
-    obs.subscribe((data:any[])=>this.posts = data);
+    this._http.getAll().subscribe((data:any[])=>this.posts = data);
   }
-
-  // createNew(){
-  //   console.log("post a new question")
-  // }
+  
  
 
 

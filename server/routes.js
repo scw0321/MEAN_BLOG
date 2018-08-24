@@ -13,11 +13,9 @@ function router(app)
 	app.get("/api/posts/:id", api.getOne);
 	//delete
 	// app.delete("/api/posts/:id", api.destroy);
-	//update
-	// app.patch("/api/posts/update/:id", api.update);
-	//addComment
-	app.put("/api/posts/:id/answer", api.addAnswer);
-	app.put("/api/posts/:id/answer/:id/comment", api.addAnswerComment);
+	
+	
+	
 }
 
 module.exports = router;
