@@ -12,6 +12,7 @@
 <body>
 <div class="container">
 
+
 <div class="form-group">
   <h4 for="question"><b>Title:</b></h4>
   <p>{{_post.title}}</p>
@@ -28,12 +29,46 @@
     <div class="form-group">
         <h4 for="answer"><b>Your answer:</b></h4> 
       <textarea class="form-control" style="resize: none; overflow-y: auto;" rows="5" id="answer" name="answer" [(ngModel)]="_answer.answer" ></textarea>
+
+  <!-- <form> -->
+  <div class="form-group">
+    <h4 for="question">Title:</h4>
+    <p>{{_post.title}}</p>
+    <h4 for="description">Description:</h4> 
+      <p>{{_post.description}}</p>
+  </div>
+
+  <h4 for="answer">Answer:</h4> 
+  <div class="container answers">
+    <div>
+      <!-- COMMENTS <P> BELOW -->
+      <p>{{_post.answers}}</p>
+        <!-- NESTED COMMENTS DIV BELOW -->
+      <div class="comments" style="color:blue">
+        <p>{{_post.comments}}</p>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <!-- Add Answer Form -->
+  <form (submit)="addAnswer()">
+    <div class="form-group">
+      <div class="form-group">
+        <label for="exampleInputPassword1" class="post">Add Answer:</label>
+        <textarea name="post" cols="140" rows="5" [(ngModel)]="_post.answer"></textarea>
+      </div>    
+    </div>
+    <button type="submit" class="btn btn-primary">Add your answer</button>
+  </form>
     </div>    
     <button type="submit">Add your answer</button>
   <!-- <button type="submit" [routerLink]="['/posts/answers',_post._id]">Add your answer</button> -->
   
   <!-- <input type="submit" name="Add your ansswer"> -->
 </form>
+
 
 </div>
 <div class="container answers" *ngFor="let x of _post.answers">

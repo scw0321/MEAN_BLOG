@@ -10,18 +10,12 @@ import { ShowComponent } from './show/show.component';
 import { NewComponent } from './new/new.component';
 // import { UpdateComponent } from './update/update.component';
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ShowComponent,
-    NewComponent
-    
-    
-    
+    NewComponent,
   ],
   imports: [
     BrowserModule,

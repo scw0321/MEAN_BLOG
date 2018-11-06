@@ -41,10 +41,6 @@ function addAnswer(req,res)
 		.then(data=>res.json(data))
 		.catch(errs=>res.json(errs));
 }
- 
-
-
-
 
 module.exports = 
 {

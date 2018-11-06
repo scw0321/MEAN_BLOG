@@ -10,11 +10,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */ 
-
   </style>
 </head>
 <body>
-
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -23,20 +21,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">Logo</a>
+      <a class="navbar-brand" routerLink="#">Logo</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="/posts/algorithms">Algorithms</a></li>
-        <li><a href="#">C#</a></li>
-        <li><a href="#">GitHub</a></li>
-        <li><a href="#">HTML/CSS</a></li>
-        <li><a href="#">Java</a></li>
-        <li><a href="#">MEAN</a></li>
-        <li><a href="#">Python</a></li>
-        
-        
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/posts">Home</a></li>
+        <li routerLinkActive="active"><a routerLink="/algorithms">Algorithms</a></li>
+        <li routerLinkActive="active"><a routerLink="/CSharp">C#</a></li>
+        <li routerLinkActive="active"><a routerLink="/GitHub">GitHub</a></li>
+        <li routerLinkActive="active"><a routerLink="/HTML">HTML/CSS</a></li>
+        <li routerLinkActive="active"><a routerLink="/Java">Java</a></li>
+        <li routerLinkActive="active"><a routerLink="/Mean">MEAN</a></li>
+        <li routerLinkActive="active"><a routerLink="/Python">Python</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>

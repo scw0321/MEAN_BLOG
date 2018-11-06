@@ -5,13 +5,18 @@ import { HomeComponent } from './home/home.component';
 import { ShowComponent } from './show/show.component';
 
 
-
-
 const routes: Routes = [
+	{path: "", pathMatch: "full", redirectTo: "/posts"},
 	{path: "posts", component: HomeComponent},
+	{path: "algorithms", component: HomeComponent},
 	{path: "posts/new", component: NewComponent},
 	{path: "posts/:id", component: ShowComponent},	
-	{path: "", pathMatch: "full", redirectTo: "posts"},
+	{path: "CSharp", component: HomeComponent},
+	{path: "GitHub", component: HomeComponent},
+	{path: "HTML", component: HomeComponent},
+	{path: "Java", component: HomeComponent},
+	{path: "Mean", component: HomeComponent},
+	{path: "Python", component: HomeComponent},
 	{path: "**", pathMatch: "full", redirectTo: "posts"},
 ];
 

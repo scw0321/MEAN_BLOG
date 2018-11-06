@@ -12,7 +12,7 @@ const PostSchema = new mongoose.Schema({
 	},
 	topic: {
 		type: String,
-		minlength: [3, 'topic must be at least 3 characters']
+		minlength: [2, 'topic must be at least 2 characters']
 	},
 	posted_at: Date,
 	

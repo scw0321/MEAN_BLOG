@@ -13,9 +13,8 @@ function router(app)
 	app.get("/api/posts/:id", api.getOne);
 	//delete
 	// app.delete("/api/posts/:id", api.destroy);
-	
-	
-	
+	//addanswer
+	app.put("/api/posts/:id", api.addAnswer)
 }
 
 module.exports = router;
